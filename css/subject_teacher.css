@@ -1,0 +1,123 @@
+#subjectTeacherTree
+{
+    margin-top: 20px;
+}
+
+#tabs
+{
+    font-size: 15px; 
+}
+.ui-tabs .ui-tabs-nav{
+
+    background: maroon;
+    border: none;
+}
+
+form li {
+  list-style: none;
+  width: 80%;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 1em 0;
+  outline: none;
+}
+
+fieldset{
+  margin-top: 20px;
+  margin-right: 80px;
+  margin-left: 80px;
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  margin-left: 30px;
+  width: 80%;
+  padding:1em 0em 1em 2.7em;
+  color: #858282;
+  font-size: 12px;
+  outline: none;
+  background: none;
+  font-weight: 500;
+  border: none;
+
+}
+.icon {
+ height: 20px;
+  width: 20px;
+  display: block;
+  float: left;
+  margin: 12px -28px 0px 0px;
+  border-right: 1px solid #999;
+  padding: 5px 16px 0 0;
+}
+
+/*submit button ADD-EDIT-DELETE*/
+
+.submit{
+}
+.submit input[type="submit"]{
+  text-decoration: none;
+  font-size:13px;
+  margin-left: 40%;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding:1em 0em 1em 0em;
+  width: 30%;
+  border: none;
+  transition: 0.1s all;
+  -webkit-transition: 0.1s all;
+  -moz-transition: 0.1s all;
+  -o-transition: 0.1s all;
+  background: maroon; 
+   border-top-right-radius: 0.44em;
+  -webkit-border-top-right-radius: 0.4em;
+  -o-border-top-right-radius: 0.4em;
+  -moz-border-top-right-radius: 0.4em;
+  border-top-left-radius: 0.4em;
+  -webkit-border-top-left-radius: 0.4em;
+  -o-border-top-left-radius: 0.4em;
+  -moz-border-top-left-radius: 0.4em;
+  border-bottom-right-radius: 0.44em;
+  -webkit-border-bottom-right-radius: 0.4em;
+  -o-border-bottom-right-radius: 0.4em;
+  -moz-border-bottom-right-radius: 0.4em;
+   border-bottom-left-radius: 0.4em;
+  -webkit-border-bottom-left-radius: 0.4em;
+  -o-border-bottom-left-radius: 0.4em;
+  -moz-border-bottom-left-radius: 0.4em;
+}
+input[type="submit"]:hover{
+  background:maroon;
+}
+
+.icons {
+ height: 20px;
+  width: 20px;
+  display: block;
+  float: left;
+  margin: 12px -28px 0px 0px;
+  border-right: 1px solid #999;
+  padding: 5px 16px 0 0;
+}
+.stdEmp {
+  background: url(../icons/stdEmp.png) no-repeat 8px 2px ;
+}
+
+nav {
+    background-color:   #000000;
+    font-size:      24px;
+}
+
+#STmenu{
+     padding-left: 140px;
+}
+#STmenu:hover{
+     color: blue;
+}
+
+#PanelTitle{
+  text-align: center;
+}

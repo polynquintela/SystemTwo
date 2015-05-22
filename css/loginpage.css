@@ -1,0 +1,150 @@
+#wrapper{
+	text-align: center;
+	width: 98.5%;
+	margin: 0px;
+	height: 97%;
+	position: fixed;
+}
+
+#rectangle 
+{
+	opacity: 0;
+	text-align: center;
+	margin-top: 2%;
+	margin-right: auto;
+	margin-left: auto;
+	width:50%;
+	height:45%;
+	border:4px outset #8d4242;
+	outline: 0px;
+}
+
+#image{
+	opacity: 0;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	height: auto;
+}
+
+#user{
+	opacity: 0;
+	margin-top: 10%;
+	font-weight: bold;
+	color: #8d4242;
+	font-family: Arial;
+	font-size: 150%;
+}
+
+#user1{
+	opacity: 0;
+	margin-top: 5%;
+	font-weight: bold;
+	color: #8d4242;
+	font-family: Arial;
+	font-size: 150%;
+}
+
+#username{
+	opacity: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1%;
+	text-align: center;
+	border: 2px solid #848484; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+#pass{
+	opacity: 0;
+	margin-top: 0%;
+	font-weight: bold;
+	color: #8d4242;
+	font-family: Arial;
+	font-size: 150%;
+}
+
+#password{
+	opacity: 0;
+	padding: 1%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border: 2px solid #848484; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+#login, #login1, #login2, #login3{
+	opacity: 0;
+	background-color:#8d2222;
+	border:2px solid #8d4242;
+	cursor:pointer;
+	color:#ffffff;
+	display: inline-block;
+	position: relative;
+	font-family:Georgia;
+	font-size:17px;
+	font-weight:bold;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 7%;
+	padding-left: 7%;
+	margin-top: 0%;
+	text-decoration:none;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 68%;
+  font-family: arial;
+  font-size: 30px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  color: grey;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="password"] {
+  display: block;
+  margin: 0;
+  width: 68%;
+  font-family: sans-serif;
+  font-size: 30px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  color: grey;
+}
+
+input[type="submit"] {
+	direction: inline;
+}
+
+input[type="password"]:focus {
+  outline: none;
+}
+
+#login:hover {
+	background-color:#aa0000;
+}
+#login:active {
+	top:1px;
+}
+
+#copyright{
+	margin-top: 2%;
+	opacity: 0;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 11px;
+}

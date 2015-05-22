@@ -1,0 +1,524 @@
+/*
+Copyright (c) 2015, the development team.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/* 
+    Created on : Apr 10, 2015, 11:29:13 PM
+    Author     : John Paul Quijano
+*/
+
+
+::selection
+{
+    background-color: #2952A3;
+}
+
+[contenteditable]
+{
+    cursor: text;
+}
+
+[contenteditable]:focus 
+{
+    outline: 0px solid transparent;
+}
+
+a
+{
+    color: orange;
+    text-decoration: none;
+}
+
+body
+{
+    margin: 0px;
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: Calibri;
+}
+
+div.twobuttonline
+{
+    width: 117px;
+}
+
+div.threebuttonline
+{
+    width: 74px;
+}
+
+div.label
+{
+    color: #ff7744;
+    font-size: 18px;
+    font-family: Corbel;
+    padding-bottom: 2px;
+}
+
+div.tool
+{
+    width: 32px;
+    height: 32px;
+    float: right;
+    padding: 2px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.floatingtool
+{
+    width: 32px;
+    height: 32px;
+    float: left;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.tooltip
+{
+    width: auto;
+    height: auto;
+    color: white;
+    z-index: 10;
+    opacity: 0.25;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: fixed;
+    font-size: 16px;
+    font-family: Corbel;
+    background-color: #222222;
+}
+
+div.dialog
+{
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    z-index: 7;
+    position: fixed;
+    font-size: 20px;
+    visibility: hidden;
+    background-color: #eeeeee;
+    border-right: 1px solid #ff7722;
+    border-left: 1px solid #ff7722;
+}
+
+div.titlebar
+{
+    height: 20px;
+    color: white;
+    padding: 4px;
+    position: relative;
+    font-size: 16px;
+    font-family: Corbel;
+    background-color: #ff7722;
+}
+
+div.buttonbar
+{
+    height: 20px;
+    padding: 4px;
+    position: relative;
+    font-size: 16px;
+    margin-top: 3px;
+    background-color: #ff7722;
+}
+
+div.dialogclosebutton
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: white;
+}
+
+div.dialogokbutton
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: white;
+}
+
+div.dialogcontent
+{
+    padding: 8px;
+}
+
+div.textfield
+{
+    width: 250px;
+    height: 22px;
+    float: left;
+    color: #444444;
+    font-size: 18px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #cccccc;
+}
+
+div.textarea
+{
+    width: 250px;
+    height: auto;
+    color: #444444;
+    font-size: 18px;
+    min-height: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #cccccc;
+}
+
+div.singleline 
+{
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.singleline br 
+{
+    display: none;
+}
+
+div.button
+{
+    height: 22px;
+    color: #444444;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    background-color: #cccccc;
+}
+
+div.button[select="false"]
+{
+    color: #bbbbbb;
+    background-color: #888888;
+}
+
+div.menu
+{
+    width: auto;
+    height: auto;
+    color: white;
+    z-index: 9;
+    opacity: 0.9;
+    position: fixed;
+    font-size: 18px;
+    text-align: center;
+    background-color: #222222;
+}
+
+div.menuitem
+{
+    cursor: pointer;
+    border-top: 1px solid #444444;
+}
+
+div.menuitem:hover
+{
+    background-color: #777777;
+}
+
+div.contenttab
+{
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+div.contenttab:hover
+{
+    color: orange;
+}
+
+div#background
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+div#topblock
+{
+    width: 80%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#header
+{
+    height: auto;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background-color: #2F4F62;
+}
+
+div#logopanel
+{
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin: 12px;
+    position: relative;
+    background-color: white;
+    border-radius: 100%;
+}
+
+div#schoolname
+{
+    width: auto;
+    height: auto;
+    float: left;
+    position: relative;
+    text-shadow: 1px 1px 2px #222222;
+}
+
+div#university
+{
+    margin-top: 14px;
+    font-size: 22px;
+}
+
+div#highschool
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div#toolbar
+{
+    height: auto;
+    color: orange;
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+div#userpanel
+{
+    width: auto;
+    height: auto;
+    margin: 4px;
+    float: left;
+    position: relative;
+}
+
+div#searchfield
+{
+    width: 200px;
+    height: 30px;
+    float: right;
+    color: #cccccc;
+    padding-top: 6px;
+    padding-left: 4px;
+    font-style: italic;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+}
+
+div#floatingtoolbar
+{
+    top: 0px;
+    right: 0px;
+    width: 24px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.25;
+    z-index: 9;
+    position: fixed;
+    padding-left: 9px;
+    padding-top: 9px;
+    font-size: 20px;
+    background-color: #666666;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url(../icons/tools.png);
+}
+
+div#floatingtoolwrapper
+{
+    display: none;
+}
+
+div#floatingsearchfield
+{
+    width: 200px;
+    height: 28px;
+    float: left;
+    color: #888888;
+    padding-top: 2px;
+    padding-left: 4px;
+    font-style: italic;
+    border: 1px solid white;
+}
+
+div#contentpanel
+{
+    width: 80%;
+    display: table;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+div#tabspanel
+{
+    width: 15%;
+    float: left;
+    color: #888888;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: Corbel;
+    overflow: hidden;
+    position: relative;
+    font-weight: bold;
+}
+
+div#resultpanel
+{
+    width: 85%;
+    float: left;
+    position: relative;
+    min-height: 480px;
+}
+
+div#copyright
+{
+    width: 80%;
+    height: auto;
+    color: #666666;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    border-top: 1px solid #aaaaaa;
+}
+
+div#signoutdialogcontent
+{
+    color: #444444;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+div#search
+{
+    background-image: url(../icons/search.png);
+}
+
+div#search:hover
+{
+    background-image: url(../icons/search_hover.png);
+}
+
+div#floatingsearch
+{
+    background-image: url(../icons/search.png);
+}
+
+div#sendmessage
+{
+    background-image: url(../icons/sendmessage.png);
+}
+
+div#sendmessage:hover
+{
+    background-image: url(../icons/sendmessage_hover.png);
+}
+
+div#floatingsendmessage
+{
+    background-image: url(../icons/sendmessage.png);
+}
+
+div#about
+{
+    background-image: url(../icons/about.png);
+}
+
+div#about:hover
+{
+    background-image: url(../icons/about_hover.png);
+}
+
+div#floatingabout
+{
+    background-image: url(../icons/about.png);
+}
+
+div#signout
+{
+    background-image: url(../icons/signout.png);
+}
+
+div#signout:hover
+{
+    background-image: url(../icons/signout_hover.png);
+}
+
+div#floatingsignout
+{
+    background-image: url(../icons/signout.png);
+}
+

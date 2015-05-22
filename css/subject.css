@@ -1,0 +1,27 @@
+#subjContent{
+    padding:             25px 25px 25px 25px;
+}
+#SubjectInfo {
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#InfoTitle {
+    background-color: black;
+    color: #FFFFFF;
+}
+
+#section1{
+	color:	#FFFFFF;
+	background:black;
+	padding:6.5px 26px 6.5px 26px;
+}
+#section1:hover{
+	background-color: 	gray;
+	color:				#FFFFFF;
+}
+#student1{
+	color:	#FFFFFF;
+	background: #FF432B;
+	padding:6.5px 26px 6.5px 26px;
+}
